@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.72.0"
+  },
+  "name": "hokko-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "sass css/style.sass public/style.css",
+    "watch:sass": "sass --watch css/style.sass public/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
