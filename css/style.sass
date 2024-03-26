@@ -1,43 +1,46 @@
+@use "patterns"
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
+
 h1
   font-size: 70px
+h2
+  font-size: 50px
+  @include patterns.block-title
+
+h3
+  font-size: 40px
+  @include patterns.block-title
 
 body
-  background-repeat: no-repeat
-  background-position: center
-  background-size: cover
-  background-image: url("../img/background.png")
+  margin: 0
+  padding: 0
+  box-sizing: border-box
   font-family: "Nunito", sans-serif
   color: white
 
 .auth-wrapper
     width: 100%
     height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    background: rgba(80, 80, 80, 0.3)
+    @include patterns.flex-column-center
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    background-image: url("../img/background.png")
 
     .logo
       height: 20%
       margin: 4em
 
     h1
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
+      @include patterns.flex-column-center
+
     h2
       margin: 0 0 1em 0
       font-size: 70px
       font-weight: 300
 
     .login-from
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
+      @include patterns.flex-column-center
       width: 100%
       font-size: 50px
 
@@ -70,3 +73,112 @@ body
           position: absolute
           left: .75em
           bottom: .65em
+
+.courses-wrapper
+  width: 100%
+  min-height: 100vh
+  background: linear-gradient(175deg, rgba(0,0,0,1) 0%, rgba(51,46,101,1) 100%)
+
+  header
+    width: 100wv
+    height: fit-content
+    display: flex
+    justify-content: flex-end
+    padding-top: 20px
+
+    .account-icon
+      margin: 2em 5em 0 0
+      width: 70px
+
+  .content
+    width: 90%
+    padding: 0 5%
+
+    .popular-wrapper
+      display: flex
+      width: 100%
+      overflow-x: scroll
+
+      .popular-card
+        display: flex
+        margin-right: 100px
+        max-height: 15vh
+        position: relative
+        border-radius: 40px
+        overflow: hidden
+        border: 1px solid #7C82B7
+        min-width: 60vw
+
+        &:last-child
+          margin-right: 0
+
+        @media screen and (min-width: 1024px)
+          height: 25vh
+
+        img
+          object-fit: cover
+          width: 100%
+          backdrop-filter: blur(20px)
+
+        .popular-card-content
+          width: 50%
+          background-color: rgba(37, 41, 87, 0.8)
+          position: absolute
+          height: 100%
+          left: 40%
+          @include patterns.flex-column-center
+          padding: 0 5%
+          align-items: flex-start
+
+          a
+            color: white
+            text-decoration: none
+            font-size: 40px
+            border: 1px solid white
+            padding: .5em 0
+            text-align: center
+            border-radius: 20px
+            width: 100%
+
+  .courses
+
+     .wrapper
+       display: flex
+       justify-content: space-between
+       flex-wrap: wrap
+
+       .course
+         width: 47.5%
+         height: 35vh
+         background-color: rgba(0, 0, 0, .4)
+         border-radius: 40px
+         overflow: hidden
+         margin-bottom: 50px
+
+         img
+           width: 100%
+           height: 50%
+           object-fit: cover
+
+         .content
+           height: 45%
+           display: flex
+           flex-direction: column
+           margin-bottom: 5%
+
+           a
+             align-self: center
+             @include patterns.button
+             width: 80%
+
+           p
+             text-overflow: ellipsis
+             flex: 1 0 0
+             font-size: 20px
+
+           h3
+             font-size: 30px
+             font-weight: 500
+             margin: .5em 0 0 0
+
+
