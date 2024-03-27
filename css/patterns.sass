@@ -17,3 +17,12 @@
   border-radius: 20px
   width: 100%
   font-weight: 300
+
+@mixin gradient
+  background: linear-gradient(175deg, rgba(0,0,0,1) 0%, rgba(51,46,101,1) 100%)
+
+@mixin cover-background-image($url)
+  background-image: url($url)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
