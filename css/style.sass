@@ -15,7 +15,7 @@ h3
   @include patterns.gradient
 
 header
-  width: 100wv
+  width: 100vw
   height: fit-content
   display: flex
   justify-content: flex-end
@@ -294,6 +294,10 @@ body
          .list
            padding: 2% 0 0 0
            overflow-x: hidden
+           display: none
+
+           &.active
+             display: block
 
            .list-item
              display: grid

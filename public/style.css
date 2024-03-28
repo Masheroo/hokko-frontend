@@ -18,7 +18,7 @@ h3 {
 }
 
 header {
-  width: 100wv;
+  width: 100vw;
   height: fit-content;
   display: flex;
   justify-content: flex-end;
@@ -326,6 +326,10 @@ body {
 .concrete-course-wrapper .materials .content .material-list .list {
   padding: 2% 0 0 0;
   overflow-x: hidden;
+  display: none;
+}
+.concrete-course-wrapper .materials .content .material-list .list.active {
+  display: block;
 }
 .concrete-course-wrapper .materials .content .material-list .list .list-item {
   display: grid;
