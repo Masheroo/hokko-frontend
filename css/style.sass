@@ -15,16 +15,25 @@ h3
   @include patterns.gradient
 
 header
-  width: 100vw
+  width: 90vw
   height: fit-content
-  display: flex
-  justify-content: flex-end
-  padding-top: 20px
+  display: grid
+  grid: auto-flow / 1fr 6fr 1fr
+  grid-template-areas: "previous empty account"
+  align-items: center
+  justify-items: center
+  padding: 2vh 5vw 0
   margin-bottom: 50px
 
+  a
+    img
+      width: 70px
+
   .account-icon
-    margin: 2em 5em 0 0
-    width: 70px
+    grid-area: account
+
+  .previous-icon
+    grid-area: previous
 
 body
   margin: 0
